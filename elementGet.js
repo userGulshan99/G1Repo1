@@ -1,30 +1,16 @@
 
-const mainheading=document.querySelector('#main-heading');
-mainheading.style.textAlign="center";
+const elet=document.createElement('h3');
+const Text=document.createTextNode('Buy high quality organic fruits online');
+elet.appendChild(Text);
 
-const fruits=document.querySelector(".fruits");
-fruits.style.backgroundColor="gray";
-fruits.style.padding="30px";
-fruits.style.margin="30px";
-fruits.style.width="50%";
-fruits.style.borderRadius="5px";
-fruits.style.listStyleType="none";
+const divselect_1=document.querySelectorAll('div');
+divselect_1[0].appendChild(elet);
+elet.style.fontStyle="italic";
 
-const basketheading = document.querySelector('#basket-heading');
-basketheading.style.marginLeft="30px";
-basketheading.style.color="brown";
+const total=document.createElement('p');
+const fr=document.createTextNode('Total fruits: 4');
+total.appendChild(fr);
 
-const fruitItems=document.querySelectorAll(".fruit");
-
-for(let i=0;i<fruitItems.length;i++){
-    fruitItems[i].style.padding='10px';
-    fruitItems[i].style.margin='10px';
-    fruitItems[i].style.borderRadius='5px';
-
-    if(i%2!=0){
-        fruitItems[i].style.backgroundColor='brown';
-        fruitItems[i].style.color='white';
-    }else{
-        fruitItems[i].style.backgroundColor='white';
-    }
-}
+let fruits=document.querySelector('ul');
+divselect_1[1].insertBefore(total,fruits);
+total.id="fruits-total";
