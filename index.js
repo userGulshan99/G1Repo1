@@ -1,13 +1,15 @@
 
-const form=document.getElementById('form');
-let username=document.getElementById('username');
-let email=document.getElementById('email');
-let phone=document.getElementById('phone');
-
-form.addEventListener('submit',function(event){
+function handleFormSubmit(event){
     event.preventDefault();
+    let obj={
+        username:event.target.username.value,
+        email:event.target.email.value,
+        phone:event.target.phone.value,
+    };
+  
+    let a=JSON.stringify(obj);
     
-    localStorage.setItem("Username",username.value);
-    localStorage.setItem("Email",email.value);
-    localStorage.setItem("Phone",phone.value);
-})
+localStorage.setItem("User Details" ,a);
+}
+
+module.exports=handleFormSubmit;
