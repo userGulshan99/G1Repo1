@@ -14,6 +14,7 @@ function addList(url,title,description){
     li.appendChild(img);
     li.appendChild(document.createElement('br'));
     li.appendChild(document.createElement('br'));
+
     li.appendChild(document.createTextNode(description));
     
     li.appendChild(document.createElement('br'));
@@ -79,16 +80,16 @@ async function buttons(li){
     li.appendChild(deleteBTn);
   }
   
-
-document.querySelector('form')
-.addEventListener('submit',(event)=>{
+  
+  document.querySelector('form')
+  .addEventListener('submit',(event)=>{
     event.preventDefault();
     let url = event.target.url.value;
     let title = event.target.title.value;
     let description = event.target.description.value;
-
+    
     addList(url,title,description);
-
+    
     let crudData = {
         url:url,
         title:title,
@@ -98,6 +99,10 @@ document.querySelector('form')
       axios.post("https://crudcrud.com/api/80fa517b692b47fb8d6c5d9e679546bf/blogs", crudData);
       
       document.getElementById('post').innerHTML = 'POST BLOG';
+
+      let count = 0;
+      count++;
+      document.getElementById('blog-count').innerHTML = `Total Blog: ${count}`;
 
     })
 
