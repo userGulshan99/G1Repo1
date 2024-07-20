@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="heading" style="margin-left: 35%;">
+    <h1 id="yourblog">Your Blog</h1> 
+    <h1 id="blog-count">Total Blog: 0</h1> 
+    </div>
+
+    <form action="">
+
+        <label for="url">Image Url: </label>
+        <input type="url" name="url" id="url">
+        <br><br>
+
+        <label for="title">Title: </label>
+        <input type="text" name="title" id="title">
+        <br><br>
+
+        <label for="description">Blog Description:</label>
+        <input type="text" id="description">
+        <br><br>
+
+        <button type="submit" id="post" name="post">POST BLOG</button>
+    </form>
+    <br><br>
+    <hr>
+    <ul id="blog-list" style="list-style: none;"></ul>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js"></script>
+<script src="blog.js"></script>
+</html>
