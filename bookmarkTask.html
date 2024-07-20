@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="heading">Bookmark Website</h1> 
+
+    <form action="">
+
+        <label for="title">Websit Title: </label>
+        <input type="text" name="title" id="title">
+
+        <br><br>
+
+        <label for="url">Website URL: </label>
+        <input type="url" name="url" id="url">
+
+        <br><br>
+        <button type="submit">Add</button>
+    </form>
+    <br><br>
+    <h2 style="margin-left: 5%;">All Bookmarks </h2>
+    <ul id="bookmarks"></ul>
+</body>
+<style>
+    #heading{
+        text-align: center;
+    }
+    form{
+        margin-left: 5%;
+    }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js"></script>
+<script src="try.js"></script>
+</html>
